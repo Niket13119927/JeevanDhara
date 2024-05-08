@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class='center'>
+        <h1>Sign Up</h1>
+    </div>
+    <div class="container">
+        <h2>Choose your role</h2>
+        <button type="button" onclick="window.location.href='signup_p'">Sign Up as Patient</button>
+        <button type="button" onclick="window.location.href='signup_h'">Sign Up as Hospital</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        input[type=text], input[type=email], input[type=tel], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hospital Sign Up</h2>
+    <form action="/signup_p" method="post">
+        {% csrf_token %}
+        <label for='husername'><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="husername" required>
+
+        <label for="hname"><b>Hospital Name</b></label>
+        <input type="text" placeholder="Enter Hospital Name" name="hname" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+
+        <label for="address"><b>Address</b></label>
+        <input type="text" placeholder="Enter Address" name="address" required>
+
+        <label for="phone"><b>Phone</b></label>
+        <input type="tel" placeholder="Enter Phone Number" name="phone" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+</body>
+</html>
